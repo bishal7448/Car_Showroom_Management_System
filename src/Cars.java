@@ -8,6 +8,7 @@ public class Cars extends Showroom implements utility{
     String car_type;
     String car_transmission;
 
+    @Override
     public void set_details(){
         Scanner sc = new Scanner(System.in);
         System.out.println("======================= *** ENTER CAR DETAILS *** =======================");
@@ -25,15 +26,19 @@ public class Cars extends Showroom implements utility{
         car_type = sc.nextLine();
         System.out.print("TRANSMISSION TYPE(AUTOMATIC/MANUAL): ");
         car_transmission = sc.nextLine();
-        total_cars_in_stock++;
+//        total_cars_in_stock++;
+        System.out.print("SHOWROOM NAME: ");
+        showroom_name = sc.nextLine();
     }
 
+    @Override
     public void get_details(){
-        System.out.println("CAR NAME: "+car_name);
-        System.out.println("COLOR: "+car_color);
-        System.out.println("FUEL TYPE: "+car_fuel_type);
-        System.out.println("PRICE: "+car_price);
-        System.out.println("CAR TYPE: "+car_type);
-        System.out.println("TRANSMISSION: "+car_transmission);
+        System.out.println("CAR NAME: "+this.car_name);
+        System.out.println("COLOR: "+this.car_color);
+        System.out.println("FUEL TYPE: "+this.car_fuel_type);
+        System.out.println("PRICE: "+this.car_price);
+        System.out.println("CAR TYPE: "+this.car_type);
+        System.out.println("TRANSMISSION: "+this.car_transmission);
+        System.out.println("Showroom Name: "+this.showroom_name);
     }
 }
